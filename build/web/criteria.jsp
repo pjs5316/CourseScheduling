@@ -8,7 +8,9 @@
 <sql:query var="campus" dataSource="jdbc/course_schedule">
     SELECT campus_name FROM campus ORDER BY campus_name
 </sql:query>
-    
+<sql:query var="subject" dataSource="jdbc/course_schedule">
+    SELECT course_subject FROM Department ORDER BY Course_Subject
+</sql:query>    
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -53,8 +55,6 @@
                     <td><strong> Select your semester: </strong>
                         <select name="semester">
                             <option>Choose a Semester</option>
-                            <option>FA15</option>
-                            <option>SP16</option>
                             <option>SU16</option>
                             <option>FA16</option>
                         </select>
@@ -65,6 +65,11 @@
                     <td><strong> Select your subject: </strong>
                         <select name="subject">
                             <option>Choose a Subject</option>
+                            <c:forEach var="row" items="${subject.rowsByIndex}">
+                                <c:forEach var="column" items="${row}">
+                                    <option value="<c:out value="${columnName}"/>"><c:out value="${column}"/></option>
+                                </c:forEach>
+                            </c:forEach>
                             <option>Math</option>
                         </select>
                     </td>
