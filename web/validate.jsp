@@ -1,3 +1,4 @@
+<%@page import="org.mypackage.schedulefiles.Student"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
@@ -8,7 +9,7 @@
 
 <%--<%@page contentType="text/html" pageEncoding="UTF-8"%>--%>
 <!DOCTYPE html>
-<%@page import = "java.sql.*" %>
+<%@page import = "java.sql.*, java.io.*, java.util.*" %>
 
 
 <%-- This will be a try-catch block with the 
@@ -25,10 +26,12 @@ The validate page will also establish a session--%>
         pst.setString(1, username);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();
+        Student ns = new Student();
         
         if(rs.next()){
             out.println("valid");
             response.sendRedirect("criteria.jsp");
+            session.setAttribute(username, ns);
         }
         else
             out.println("invalid");

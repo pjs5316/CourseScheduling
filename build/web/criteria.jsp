@@ -6,10 +6,11 @@
     Author     : jakesemple
 --%>
 <sql:query var="campus" dataSource="jdbc/course_schedule">
-    SELECT campus_name FROM campus ORDER BY campus_name
+    SELECT campus_ID, campus_name FROM campus ORDER BY campus_name
 </sql:query>
 <sql:query var="subject" dataSource="jdbc/course_schedule">
-    SELECT course_subject FROM Department ORDER BY Course_Subject
+    SELECT Department_ID, course_subject FROM Department ORDER BY Course_Subject
+    
 </sql:query>    
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -42,10 +43,8 @@
                         <strong> Select your campus: </strong>
                         <select name="campus">
                             <option>Choose a Campus</option>
-                            <c:forEach var="row" items="${campus.rowsByIndex}">
-                                <c:forEach var="column" items="${row}">
-                                    <option value="<c:out value="${columnName}"/>"><c:out value="${column}"/></option>
-                                </c:forEach>
+                            <c:forEach var="row" items="${campus.rows}">
+                                <option value="${row.campus_ID}">${row.campus_name}</option>
                             </c:forEach>
                         </select>
                     </td>
@@ -55,7 +54,7 @@
                     <td><strong> Select your semester: </strong>
                         <select name="semester">
                             <option>Choose a Semester</option>
-                            <option>SU16</option>
+                            <option>SP16</option>
                             <option>FA16</option>
                         </select>
                     </td>
@@ -65,12 +64,9 @@
                     <td><strong> Select your subject: </strong>
                         <select name="subject">
                             <option>Choose a Subject</option>
-                            <c:forEach var="row" items="${subject.rowsByIndex}">
-                                <c:forEach var="column" items="${row}">
-                                    <option value="<c:out value="${columnName}"/>"><c:out value="${column}"/></option>
-                                </c:forEach>
+                            <c:forEach var="row" items="${subject.rows}">
+                                <option value="${row.Department_ID}">${row.course_subject}</option>
                             </c:forEach>
-                            <option>Math</option>
                         </select>
                     </td>
                     <td>
