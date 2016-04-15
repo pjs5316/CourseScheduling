@@ -1,3 +1,4 @@
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
@@ -5,10 +6,10 @@
     Created on : Feb 9, 2016, 1:46:16 PM
     Author     : jakesemple
 --%>
-<sql:query var="campus" dataSource="jdbc/course_schedule">
+<sql:query var="campus" dataSource="jdbc/courseSchedule">
     SELECT campus_ID, campus_name FROM campus ORDER BY campus_name
 </sql:query>
-<sql:query var="subject" dataSource="jdbc/course_schedule">
+<sql:query var="subject" dataSource="jdbc/courseSchedule">
     SELECT Department_ID, course_subject FROM Department ORDER BY Course_Subject
     
 </sql:query>    
@@ -22,14 +23,15 @@
     </head>
     <body>
         <ul class="nav navbar-nav">
-      <li class="active"><a href="index.jsp">Log Out</a></li>
+      <li class="active"><a href="index.htm">Log Out</a></li>
       <li><a href="criteria.jsp">New Search</a></li>
       <li><a href="my_schedule.jsp">Your Schedule</a></li>
       <li><a href="my_watchlist.jsp">Your Watch List</a></li>
       
     </ul>
-        <h1>Welcome to your course scheduler</h1>
-        
+        <c:forEach var="student" items="${student}">          
+            <h1>Welcome ${student.firstname},to your course scheduler</h1>
+        </c:forEach>
         <table border="0">
             <thead>
                 <tr>
@@ -39,7 +41,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><form action="browse.jsp">
+                    <td><form:form method="post" action="browse.jsp">
                         <strong> Select your campus: </strong>
                         <select name="campus">
                             <option>Choose a Campus</option>
@@ -69,13 +71,29 @@
                             </c:forEach>
                         </select>
                     </td>
+                    
                     <td>
                         <button onclick="browse.jsp">Search</button>
                     </td>
+                    <td><a href="getList?campusID=${param.campus},departmentID=${param.subject}">Add</a></td>
                 </tr>
-                </form>
-            </tbody>
-        </table>
+                </table>
+                </form:form>
+                
+                 <form:form method="post" action="/getList">  
+                     <table border = "0">
+                         <tr>
+                             <select name="altCampus">
+                            <option>Choose a Campus</option>
+                            <c:forEach var="row" items="${map.campusList}">
+                                <option value="${row}">${map.campusList}</option>
+                            </c:forEach>
+                        </select>  
+                         </tr>
+                     </table>
+                 </form:form>     
+            </tbody> 
+        
 
     </body>
 </html>

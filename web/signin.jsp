@@ -1,10 +1,11 @@
+<%-- 
+    Document   : signin
+    Created on : Apr 10, 2016, 8:33:13 PM
+    Author     : jakesemple
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!-- will need to add DB Report with either session scope or application scope-->
 <html>
     <head>
         <title>Welcome to CourseScheduler</title>
@@ -24,6 +25,8 @@ and open the template in the editor.
             Password: <input type="password" name="password">
         <button onclick="validate.jsp">Sign In</button>
         </form>
+            
+            <tr><td colspan="7"><a href="criteria">Select Criteria</a></td></tr>  
         
         
     </body>

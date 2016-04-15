@@ -3,15 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/validate.jsp</file>
-            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/my_watchlist.jsp</file>
-            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/StudentList.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/sectionMapper.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/StudentDAO.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/SectionDAO.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/StudentSchedule.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/redirect.jsp</file>
             <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/browse.jsp</file>
-            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/criteria.jsp</file>
-            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/WEB-INF/web.xml</file>
-            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/index.jsp</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/Section.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/signin.jsp</file>
             <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/Student.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/setup/sun-resources.xml</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/StudentDAOImpl.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/StudentMapper.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/WEB-INF/web.xml</file>
             <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/my_schedule.jsp</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/SectionServiceImpl.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/SectionService.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/SectionDAOImpl.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/nbproject/build-impl.xml</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/validate.jsp</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/StudentController.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/my_watchlist.jsp</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/src/java/org/mypackage/schedulefiles/SessionServlet.java</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/Users/jakesemple/NetBeansProjects/CourseScheduling/web/criteria.jsp</file>
         </group>
     </open-files>
 </project-private>
